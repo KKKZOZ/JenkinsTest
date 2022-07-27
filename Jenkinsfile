@@ -16,8 +16,8 @@ pipeline {
 
     stage('Content Introspect') {
       steps {
-        sh 'java --version'
         sh 'ls'
+        sh 'java --version'
       }
     }
 
