@@ -17,6 +17,7 @@ pipeline {
     stage('Content Introspect') {
       steps {
         sh 'ls'
+        sh 'chmod 777 ./mvnw'
       }
     }
 
