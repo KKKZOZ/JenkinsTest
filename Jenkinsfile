@@ -16,9 +16,9 @@ pipeline {
 
     stage('Content Introspect') {
       steps {
+        sh 'java --version'
         sh 'ls'
         sh 'chmod 777 ./mvnw'
-        sh 'java --version'
       }
     }
 
