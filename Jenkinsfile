@@ -10,7 +10,7 @@ pipeline {
 
     stage('Test') {
       steps {
-        sh './mvnw test'
+        sh 'mvn test'
       }
     }
 
@@ -23,7 +23,7 @@ pipeline {
 
     stage('MVNW') {
       steps {
-        sh './mvnw clean package'
+        sh 'mvn clean package'
       }
     }
 
