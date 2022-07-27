@@ -1,16 +1,16 @@
 pipeline {
   agent any
   stages {
-    stage('Hello') {
+    stage('Init') {
       steps {
-        sh 'echo "This is also KKKZOZ speaking!"'
         sh 'echo "Hello! This is KKKZOZ speaking!"'
+        sh 'chmod 777 ./mvnw'
       }
     }
 
-    stage('Test Docker') {
+    stage('Test') {
       steps {
-        sh 'docker ps'
+        sh './mvnw test'
       }
     }
 
@@ -18,13 +18,18 @@ pipeline {
       steps {
         sh 'java --version'
         sh 'ls'
-        sh 'chmod 777 ./mvnw'
       }
     }
 
     stage('MVNW') {
       steps {
         sh './mvnw clean package'
+      }
+    }
+
+    stage('Store') {
+      steps {
+        archiveArtifacts './target/*.jar'
       }
     }
 
