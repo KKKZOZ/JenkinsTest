@@ -5,6 +5,8 @@ pipeline {
       steps {
         sh 'echo "Hello! This is KKKZOZ speaking!"'
         sh 'chmod 777 ./mvnw'
+        sh 'java --version'
+        sh 'mvn -v'
       }
     }
 
