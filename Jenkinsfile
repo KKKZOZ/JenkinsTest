@@ -6,8 +6,8 @@ pipeline {
         sh 'echo "Hello! This is KKKZOZ speaking!"'
         sh 'chmod 777 ./mvnw'
         sh 'java --version'
-        sh 'mvn -v'
         tool(name: 'Maven-3.8.6', type: 'maven')
+        sh 'mvn -v'
       }
     }
 
