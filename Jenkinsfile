@@ -18,6 +18,7 @@ pipeline {
       steps {
         sh 'ls'
         sh 'chmod 777 ./mvnw'
+        sh 'java --version'
       }
     }
 
