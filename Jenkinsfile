@@ -22,7 +22,7 @@ pipeline {
 
     stage('MVNW') {
       steps {
-        sh 'mvnw clean package'
+        sh './mvnw clean package'
       }
     }
 
