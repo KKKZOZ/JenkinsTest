@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('Hello') {
       steps {
-        sh 'echo "Hello! This is KKKZOZ speaking!"'
         sh 'echo "This is also KKKZOZ speaking!"'
+        sh 'echo "Hello! This is KKKZOZ speaking!"'
       }
     }
 
