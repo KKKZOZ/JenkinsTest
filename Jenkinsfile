@@ -29,7 +29,7 @@ pipeline {
 
     stage('Store') {
       steps {
-        archiveArtifacts './target/*.jar'
+        archiveArtifacts 'target/*.jar'
       }
     }
 
