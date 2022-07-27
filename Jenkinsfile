@@ -14,7 +14,13 @@ pipeline {
       }
     }
 
-    stage('Test MVNW') {
+    stage('Content Introspect') {
+      steps {
+        sh 'ls'
+      }
+    }
+
+    stage('MVNW') {
       steps {
         sh 'mvnw clean package'
       }
